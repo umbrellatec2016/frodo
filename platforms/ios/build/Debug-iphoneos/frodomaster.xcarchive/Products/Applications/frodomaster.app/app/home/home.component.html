@@ -1,0 +1,24 @@
+<ActionBar class="action-bar">
+    <StackLayout class="action-bar-title">
+        <Label text="Contacts"></Label>
+    </StackLayout>
+</ActionBar>
+
+<ScrollView  > 
+    <StackLayout (loaded)="getSize($event)" >
+        <ListView [items]="cnts" (tap)="onTap($event)"  flexGrow="1" height="{{heights}}"  > 
+            <ng-template let-contact="item" let-question="item.user.charAt(0)"  >
+               
+                <StackLayout orientation="horizontal" class="chat-item"  >
+                   
+                       
+                   
+                    <StackLayout class="contactpic" style="background-image:url(data:image/png;contact.thumbnail)"></StackLayout>
+                    <Label class="contact-text"  [text]="contact.user"></Label>
+                    <Button text="+ Extension" (tap)="onTap($event)" class="btn  cp" ></Button>
+                    
+                </StackLayout>
+            </ng-template>
+        </ListView>
+    </StackLayout>
+</ScrollView>

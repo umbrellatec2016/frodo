@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs"
+    },
+    "files": [
+        "index.js",
+        "contacts.android.js",
+        "contacts.ios.js",
+        "get-contacts-worker.js",
+        "contact-helper.android.js",
+        "contact-helper.ios.js",
+        "constants.android.js"
+    ]
+}

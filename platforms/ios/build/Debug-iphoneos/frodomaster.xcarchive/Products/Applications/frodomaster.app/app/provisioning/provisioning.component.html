@@ -1,0 +1,48 @@
+
+
+<GridLayout class="page coverImage" rows="150,*,50,50,*,*" style="" [visibility]="showingProvisioning ? 'visible' : 'collapsed'">
+  <StackLayout row="0" col="0" orientation="vertical" ></StackLayout>
+  <StackLayout row="1" col="0" orientation="vertical" class="logocall baja"></StackLayout>
+  <StackLayout row="2" col="0" orientation="horizontal" class="phoneNumber">
+      
+       <TextField 
+      [(ngModel)]='countryCode' 
+      secure="false"
+      keyboardType="number"
+      returnKeyType="done" 
+      (returnPress)="onReturnPress($event)"
+      autocorrect="false"
+      maxLength="4"
+      keyboardType="phone"
+      (focus)="onReturnPress($event)" 
+      (blur)="onReturnPress($event)" 
+      class="countrycode"></TextField>
+    
+    <TextField  hint="Enter phone" 
+    [(ngModel)]='number' 
+    secure="false"
+    keyboardType="number"
+    returnKeyType="done" 
+    keyboardType="phone"
+    autocorrect="false"
+    maxLength="10"
+    class="number"></TextField> 
+
+
+    
+  </StackLayout>
+  <StackLayout row="3" col="0" orientation="vertical" class="selectCountry">
+    
+      <!--<ListPicker  [items]="country" [selectedIndex]="0" (onTap)="selectedIndexChanged(1)" (selectedIndexChange)="selectedIndexChanged($event)" class="p-15 picker">{{country.name}}</ListPicker>-->
+      <label class="white" [text]="selectedCountry" (onTap)="openSelect()"></label>
+  </StackLayout>
+  <StackLayout row="4" orientation="vertical" class="submitProvisioning">
+    <Button class="btn btn-primary btn-active btn-signup sube" id="button" text="Sign Up!" (tap)="onTap($event)"></Button>
+  </StackLayout>
+  <StackLayout row="5" col="0" orientation="vertical" ></StackLayout>
+
+
+
+</GridLayout>
+
+

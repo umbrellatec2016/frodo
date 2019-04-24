@@ -1,0 +1,23 @@
+<GridLayout rows="40, 44, 35, *" class="card">
+    <Label row="0" text="&#xe901;" class="icon"></Label>
+
+    <StackLayout row="1" class="card-balance">
+        <Label text="Card Balance" class="card-balance-label"></Label>
+        <Label text="$3000" class="card-balance-ammount"></Label>
+    </StackLayout>
+
+    <FlexboxLayout row="2" alignItems="center" justifyContent="space-around"
+        class="card-number">
+        <Label text="* * * *"></Label>
+        <Label text="* * * *"></Label>
+        <Label text="* * * *"></Label>
+        <Label text="1234"></Label>
+    </FlexboxLayout>
+
+    <Label row="3" class="card-expires">
+        <FormattedString>
+            <Span text="EXPIRES "></Span>
+            <Span text="12/24"></Span>
+        </FormattedString>
+    </Label>
+</GridLayout>

@@ -1,0 +1,33 @@
+<GridLayout columns="*, *, *, *, *" height="54" row="1" class="bottom-navigation">
+
+    <GridLayout col="0" rows="auto, *" class="bottom-navigation-item"
+    [class.selected]="isComponentSelected('/history')" (tap)="onNavItemTap('/history')">
+        <Label row="0" text="&#xea2e;" class="icon"></Label>
+        <Label row="1" text="History" class="label"></Label>
+    </GridLayout>
+
+    <GridLayout col="1" rows="auto, *" class="bottom-navigation-item"
+        [class.selected]="isComponentSelected('/home')" (tap)="onNavItemTap('/home')">
+        <Label row="0" text="&#xe972;" class="icon"></Label>
+        <Label row="1" text="Contacts" class="label"></Label>
+    </GridLayout>
+
+    <GridLayout col="2" rows="auto, *" class="bottom-navigation-item"
+        [class.selected]="isComponentSelected('/dialpad')" (tap)="onNavItemTap('/dialpad')">
+        <Label row="0" text="&#xe942;" class="icon"></Label>
+        <Label row="1" text="Dial Pad" class="label"></Label>
+    </GridLayout>
+
+    <GridLayout col="3" rows="auto, *" class="bottom-navigation-item"
+        [class.selected]="isComponentSelected('/messages')" (tap)="onNavItemTap('/messages')">
+        <Label row="0" text="&#xe96d;" class="icon"></Label>
+        <Label row="1" text="Chats" class="label"></Label>
+    </GridLayout>
+
+    <GridLayout col="4" rows="auto, *" class="bottom-navigation-item"
+        [class.selected]="isComponentSelected('/settings')" (tap)="onNavItemTap('/settings')">
+        <Label row="0" text="&#xe994;" class="icon"></Label>
+        <Label row="1" text="Settings" class="label"></Label>
+    </GridLayout>
+
+</GridLayout>

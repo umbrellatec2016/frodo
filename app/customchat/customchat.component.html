@@ -1,0 +1,33 @@
+<ActionBar class="action-bar">
+    <StackLayout class="action-bar-title">
+        <Label text="chat with Matilda"></Label>
+    </StackLayout>
+</ActionBar>
+
+
+<StackLayout position="vertical" (loaded)="getSize($event)" style="z-index: 999; height: 900px;" >
+   
+  <ListView height="90%" margin-bottom="50" padding="5"  [items]="cnts">
+      <ng-template let-contact="item">
+          <GridLayout columns="*" rows="auto" class="msg">
+              <StackLayout  orientation="horizontal" >
+                   <Label   class="text-chat" [text]="contact.text" *ngIf="contact.position=='right' " ></Label>
+                  <StackLayout class="contactpic pic" *ngIf="contact.position=='right' "></StackLayout>
+                 
+                  <StackLayout class="contactpicb pic" *ngIf="contact.position=='left' "></StackLayout>
+                  <Label   class="text-chat-left"  [text]="contact.text" *ngIf="contact.position=='left' " ></Label>
+              </StackLayout>
+          </GridLayout>
+      </ng-template>
+  </ListView>
+
+  <StackLayout #chatbox height="10%">
+      <GridLayout columns="*,auto" style="padding: 10">
+          <TextField #textfield class="chatTextField" row="0" col="0" [(ngModel)]="message"></TextField>
+          <Button #btn class="chatBtn" row="0" col="1" text="send" (tap)=chat(message)></Button>
+      </GridLayout>
+</StackLayout>
+</StackLayout>
+
+            
+  

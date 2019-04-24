@@ -1,0 +1,42 @@
+.page {
+  background-color: #fff;
+  vertical-align: top;
+}
+
+.action-bar {
+  background-color: #f1f5f8;
+  border-width: 1;
+  border-color: transparent;
+  
+}
+
+.action-bar .action-item {
+  color: black;
+}
+
+.action-bar .action-bar-title {
+  color: #3d4852;
+  font-size: 20;
+}
+
+.chat-list{
+  width: 100%;
+}
+.text-chat{
+  padding-left: 10px;
+  width: 80%;
+  vertical-align: middle;
+}
+.pic{
+  align-content: center;
+  text-align: center;
+  width: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.text-chat-left{
+  padding-left: 10px;
+  width: 80%;
+  vertical-align: middle;
+}
+

@@ -1,0 +1,70 @@
+{
+  "_from": "nativescript-contacts-lite",
+  "_id": "nativescript-contacts-lite@0.2.6",
+  "_inBundle": false,
+  "_integrity": "sha512-BoKyrzYRBEchZivbsN8zfZOcEcB6x8TufUcKJI3yOVDgsMPpemb7VzTHbxTo4XRMexzLPUtDe4arDDEbbcrkiQ==",
+  "_location": "/nativescript-contacts-lite",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "nativescript-contacts-lite",
+    "name": "nativescript-contacts-lite",
+    "escapedName": "nativescript-contacts-lite",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-contacts-lite/-/nativescript-contacts-lite-0.2.6.tgz",
+  "_shasum": "e12d409ebe9c0eef1c14cd53fd23e6773f90c4a6",
+  "_spec": "nativescript-contacts-lite",
+  "_where": "/Users/home/Downloads/frodo-master",
+  "author": {
+    "name": "Jonathan Salomon",
+    "email": "mail2joni@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/abhayastudios/nativescript-contacts-lite/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "nativescript-permissions": "^1.2.2"
+  },
+  "deprecated": false,
+  "description": "NativeScript plugin providing pretty fast read-only access to the iOS and Android contact directory",
+  "devDependencies": {},
+  "homepage": "https://github.com/abhayastudios/nativescript-contacts-lite",
+  "keywords": [
+    "NativeScript",
+    "Contacts",
+    "Address Book",
+    "Contact Directory"
+  ],
+  "license": "MIT",
+  "main": "index",
+  "name": "nativescript-contacts-lite",
+  "nativescript": {
+    "platforms": {
+      "ios": "2.4.0",
+      "android": "2.4.0"
+    },
+    "plugin": {
+      "nan": "true",
+      "pan": "true",
+      "core3": "true",
+      "webpack": "true",
+      "wrapper": "false",
+      "category": "Processing"
+    },
+    "demong": "/demo-angular"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhayastudios/nativescript-contacts-lite.git"
+  },
+  "version": "0.2.6"
+}

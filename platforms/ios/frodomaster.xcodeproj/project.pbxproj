@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03D75452B59B40B8AFB7A24C /* TNSListView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C8656B821845608FC00D10 /* TNSListView.framework */; };
+		10967332133F46E9B7DA4A4B /* TNSAutoComplete.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAA8FE3034A144FB80C60E30 /* TNSAutoComplete.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		10C5DBD29D7545E9813E934D /* TNSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA266109C3448829DAFB2E4 /* TNSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		166D3770EAA84F139D5BDE65 /* TNSAutoComplete.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA8FE3034A144FB80C60E30 /* TNSAutoComplete.framework */; };
+		2CF6E13EC5964AEAB11E1A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB1442B1206744FFA146320F /* Assets.xcassets */; };
+		32CD6AB13A634F6A869A4BF0 /* TNSListView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A3C8656B821845608FC00D10 /* TNSListView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4F83A396336C42E6A0CBF983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B95C164E77429D86F1923D /* LaunchScreen.storyboard */; };
+		60CD1C630CED46BBBBA14645 /* TNSChart.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04617F0B95D8449589898C12 /* TNSChart.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		67FFA0979C7B43BAB2BEE878 /* NativeScriptEmbedder.m in Sources */ = {isa = PBXBuildFile; fileRef = 63643C0946544E25BB1D6B69 /* NativeScriptEmbedder.m */; };
+		7307B3D1757245F1A13896FE /* sqlitewrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3EFA9EBD0E4C1D8E4F9F3D /* sqlitewrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7C82E96D59BA4E7DBCF0604B /* TNSDataForm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFEBC89A0E9645249E66B316 /* TNSDataForm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		858B842D18CA22B800AB12DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 858B833A18CA111C00AB12DE /* InfoPlist.strings */; };
+		89ED126A6E574AD587FC86D6 /* TNSCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 680AFB5D1A714C03BF64C021 /* TNSCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9376AAAA17754D27A8FD4755 /* TNSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680AFB5D1A714C03BF64C021 /* TNSCalendar.framework */; };
+		943186B635874959A84AAB11 /* TNSWidgets.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A40008D2E9A940D692B4ED6E /* TNSWidgets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A8C355B724EA47288824453A /* TNSGauge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07886EE402454C5986E18D52 /* TNSGauge.framework */; };
+		AB7FB9E309F74BD491389DD9 /* TNSChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04617F0B95D8449589898C12 /* TNSChart.framework */; };
+		B128EC8EBF184FB485455470 /* TNSSideDrawer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC396A9C3A6B4AB89369BE14 /* TNSSideDrawer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B1655571D8944AFCBD0E6714 /* TNSDataForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEBC89A0E9645249E66B316 /* TNSDataForm.framework */; };
+		B507607BC2E044D58B490256 /* TNSWidgets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40008D2E9A940D692B4ED6E /* TNSWidgets.framework */; };
+		B7FF16486FF84F718D27930F /* TNSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA266109C3448829DAFB2E4 /* TNSCore.framework */; };
+		BFBF78413DCF4030ABB12298 /* sqlitewrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3EFA9EBD0E4C1D8E4F9F3D /* sqlitewrapper.framework */; };
+		CD45EE7C18DC2D5800FB50C0 /* app in Resources */ = {isa = PBXBuildFile; fileRef = CD45EE7A18DC2D5800FB50C0 /* app */; };
+		CD62955D1BB2678900AE3A93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD62955C1BB2678900AE3A93 /* main.m */; };
+		EB7B63B0591E4EB4B4104102 /* TNSGauge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07886EE402454C5986E18D52 /* TNSGauge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F45D0B592268CC1800EF4648 /* Pods_frodomaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45D0B582268CC1800EF4648 /* Pods_frodomaster.framework */; };
+		F45D0B5E2268CC6900EF4648 /* IQKeyboardManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45D0B5A2268CC6800EF4648 /* IQKeyboardManager.framework */; };
+		F45D0B5F2268CC6900EF4648 /* QBImagePickerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45D0B5B2268CC6800EF4648 /* QBImagePickerController.framework */; };
+		F45D0B602268CC6900EF4648 /* SAMKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45D0B5C2268CC6900EF4648 /* SAMKeychain.framework */; };
+		F45D0B612268CC6900EF4648 /* QBImagePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F45D0B5D2268CC6900EF4648 /* QBImagePicker.bundle */; };
+		F51446829C194EAA9BED8371 /* TNSSideDrawer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC396A9C3A6B4AB89369BE14 /* TNSSideDrawer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85F5BDFC1A9363BE006B9701 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				10967332133F46E9B7DA4A4B /* TNSAutoComplete.framework in Embed Frameworks */,
+				89ED126A6E574AD587FC86D6 /* TNSCalendar.framework in Embed Frameworks */,
+				60CD1C630CED46BBBBA14645 /* TNSChart.framework in Embed Frameworks */,
+				7C82E96D59BA4E7DBCF0604B /* TNSDataForm.framework in Embed Frameworks */,
+				EB7B63B0591E4EB4B4104102 /* TNSGauge.framework in Embed Frameworks */,
+				32CD6AB13A634F6A869A4BF0 /* TNSListView.framework in Embed Frameworks */,
+				B128EC8EBF184FB485455470 /* TNSSideDrawer.framework in Embed Frameworks */,
+				7307B3D1757245F1A13896FE /* sqlitewrapper.framework in Embed Frameworks */,
+				10C5DBD29D7545E9813E934D /* TNSCore.framework in Embed Frameworks */,
+				943186B635874959A84AAB11 /* TNSWidgets.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04617F0B95D8449589898C12 /* TNSChart.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TNSChart.framework; path = "$(SRCROOT)/../../node_modules/nativescript-ui-chart/platforms/ios/TNSChart.framework"; sourceTree = "<group>"; };
+		07886EE402454C5986E18D52 /* TNSGauge.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TNSGauge.framework; path = "$(SRCROOT)/../../node_modules/nativescript-ui-gauge/platforms/ios/TNSGauge.framework"; sourceTree = "<group>"; };
+		3253ADA8307F2D9CBE804684 /* Pods-frodomaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frodomaster.release.xcconfig"; path = "Target Support Files/Pods-frodomaster/Pods-frodomaster.release.xcconfig"; sourceTree = "<group>"; };
+		391174B321F1CBD300BA2583 /* TNSDebugging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNSDebugging.h; path = internal/TNSDebugging.h; sourceTree = SOURCE_ROOT; };
+		391174B421F1CBD300BA2583 /* TNSExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNSExceptionHandler.h; path = internal/TNSExceptionHandler.h; sourceTree = SOURCE_ROOT; };
+		391174B521F1D7BF00BA2583 /* nativescript-build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "nativescript-build.xcconfig"; path = "internal/nativescript-build.xcconfig"; sourceTree = SOURCE_ROOT; };
+		391174B721F1D99900BA2583 /* plugins-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "plugins-release.xcconfig"; sourceTree = SOURCE_ROOT; };
+		391174B821F1D99900BA2583 /* plugins-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "plugins-debug.xcconfig"; sourceTree = SOURCE_ROOT; };
+		3BA266109C3448829DAFB2E4 /* TNSCore.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TNSCore.framework; path = "$(SRCROOT)/../../node_modules/nativescript-ui-core/platforms/ios/TNSCore.framework"; sourceTree = "<group>"; };
+		3F624AC15BCD4A1D8E6D1EB8 /* module.modulemap */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "../../node_modules/tns-core-modules/platforms/ios/src/module.modulemap"; sourceTree = "<group>"; };
+		559B0227EF2BEF74C87FA5E1 /* Pods_frodomaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frodomaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63643C0946544E25BB1D6B69 /* NativeScriptEmbedder.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = NativeScriptEmbedder.m; path = "../../node_modules/tns-core-modules/platforms/ios/src/NativeScriptEmbedder.m"; sourceTree = "<group>"; };
+		680AFB5D1A714C03BF64C021 /* TNSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TNSCalendar.framework; path = "$(SRCROOT)/../../node_modules/nativescript-ui-calendar/platforms/ios/TNSCalendar.framework"; sourceTree = "<group>"; };
+		73B95C164E77429D86F1923D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = LaunchScreen.storyboard; path = frodomaster/Resources/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		858B832E18CA111C00AB12DE /* frodomaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frodomaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		858B833918CA111C00AB12DE /* frodomaster-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "frodomaster-Info.plist"; sourceTree = "<group>"; };
+		858B833B18CA111C00AB12DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		858B833F18CA111C00AB12DE /* frodomaster-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "frodomaster-Prefix.pch"; sourceTree = "<group>"; };
+		858B843318CA22B800AB12DE /* frodomaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frodomaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C3EFA9EBD0E4C1D8E4F9F3D /* sqlitewrapper.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = sqlitewrapper.framework; path = "$(SRCROOT)/../../node_modules/nativescript-sqlite/platforms/ios/sqlitewrapper.framework"; sourceTree = "<group>"; };
+		98D69CC568C1849E90FB6125 /* Pods-frodomaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frodomaster.debug.xcconfig"; path = "Target Support Files/Pods-frodomaster/Pods-frodomaster.debug.xcconfig"; sourceTree = "<group>"; };
+		A3C8656B821845608FC00D10 /* TNSListView.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TNSListView.framework; path = "$(SRCROOT)/../../node_modules/nativescript-ui-listview/platforms/ios/TNSListView.framework"; sourceTree = "<group>"; };
+		A40008D2E9A940D692B4ED6E /* TNSWidgets.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TNSWidgets.framework; path = "$(SRCROOT)/../../node_modules/tns-core-modules-widgets/platforms/ios/TNSWidgets.framework"; sourceTree = "<group>"; };
+		BB1442B1206744FFA146320F /* Assets.xcassets */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = frodomaster/Resources/Assets.xcassets; sourceTree = "<group>"; };
+		CAA8FE3034A144FB80C60E30 /* TNSAutoComplete.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TNSAutoComplete.framework; path = "$(SRCROOT)/../../node_modules/nativescript-ui-autocomplete/platforms/ios/TNSAutoComplete.framework"; sourceTree = "<group>"; };
+		CD45EE7A18DC2D5800FB50C0 /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = "<group>"; };
+		CD62955C1BB2678900AE3A93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = internal/main.m; sourceTree = SOURCE_ROOT; };
+		CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-debug.xcconfig"; sourceTree = "<group>"; };
+		CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "build-release.xcconfig"; sourceTree = "<group>"; };
+		CDF4743E1BA4855C0087EA85 /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = build.xcconfig; sourceTree = "<group>"; };
+		D30BE510F19E4C99A2169250 /* build.xcconfig */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = frodomaster/Resources/build.xcconfig; sourceTree = "<group>"; };
+		E189BF42ACE34977BD8B7D73 /* NativeScriptEmbedder.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = NativeScriptEmbedder.h; path = "../../node_modules/tns-core-modules/platforms/ios/src/NativeScriptEmbedder.h"; sourceTree = "<group>"; };
+		EC396A9C3A6B4AB89369BE14 /* TNSSideDrawer.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TNSSideDrawer.framework; path = "$(SRCROOT)/../../node_modules/nativescript-ui-sidedrawer/platforms/ios/TNSSideDrawer.framework"; sourceTree = "<group>"; };
+		EFEBC89A0E9645249E66B316 /* TNSDataForm.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = TNSDataForm.framework; path = "$(SRCROOT)/../../node_modules/nativescript-ui-dataform/platforms/ios/TNSDataForm.framework"; sourceTree = "<group>"; };
+		F45D0B582268CC1800EF4648 /* Pods_frodomaster.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pods_frodomaster.framework; sourceTree = "<group>"; };
+		F45D0B5A2268CC6800EF4648 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IQKeyboardManager.framework; sourceTree = "<group>"; };
+		F45D0B5B2268CC6800EF4648 /* QBImagePickerController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QBImagePickerController.framework; sourceTree = "<group>"; };
+		F45D0B5C2268CC6900EF4648 /* SAMKeychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAMKeychain.framework; sourceTree = "<group>"; };
+		F45D0B5D2268CC6900EF4648 /* QBImagePicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QBImagePicker.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		858B83F418CA22B800AB12DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				166D3770EAA84F139D5BDE65 /* TNSAutoComplete.framework in Frameworks */,
+				9376AAAA17754D27A8FD4755 /* TNSCalendar.framework in Frameworks */,
+				AB7FB9E309F74BD491389DD9 /* TNSChart.framework in Frameworks */,
+				B1655571D8944AFCBD0E6714 /* TNSDataForm.framework in Frameworks */,
+				A8C355B724EA47288824453A /* TNSGauge.framework in Frameworks */,
+				F45D0B592268CC1800EF4648 /* Pods_frodomaster.framework in Frameworks */,
+				03D75452B59B40B8AFB7A24C /* TNSListView.framework in Frameworks */,
+				F45D0B602268CC6900EF4648 /* SAMKeychain.framework in Frameworks */,
+				F51446829C194EAA9BED8371 /* TNSSideDrawer.framework in Frameworks */,
+				BFBF78413DCF4030ABB12298 /* sqlitewrapper.framework in Frameworks */,
+				F45D0B5F2268CC6900EF4648 /* QBImagePickerController.framework in Frameworks */,
+				B7FF16486FF84F718D27930F /* TNSCore.framework in Frameworks */,
+				B507607BC2E044D58B490256 /* TNSWidgets.framework in Frameworks */,
+				F45D0B5E2268CC6900EF4648 /* IQKeyboardManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		158CD4407FF44F83B2916B95 /* TNSNativeSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TNSNativeSource;
+			sourceTree = "<group>";
+		};
+		858B832518CA111C00AB12DE = {
+			isa = PBXGroup;
+			children = (
+				E070579D1B39A9D000214BF1 /* Resources */,
+				858B833718CA111C00AB12DE /* frodomaster */,
+				858B833018CA111C00AB12DE /* Frameworks */,
+				858B832F18CA111C00AB12DE /* Products */,
+				896A4D4E7D6B44EEB238AACE /* tns-core-modules */,
+				A37594AFCE3848BC97ECC23D /* Pods */,
+				158CD4407FF44F83B2916B95 /* TNSNativeSource */,
+			);
+			sourceTree = "<group>";
+		};
+		858B832F18CA111C00AB12DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				858B832E18CA111C00AB12DE /* frodomaster.app */,
+				858B843318CA22B800AB12DE /* frodomaster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		858B833018CA111C00AB12DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F45D0B5A2268CC6800EF4648 /* IQKeyboardManager.framework */,
+				F45D0B5D2268CC6900EF4648 /* QBImagePicker.bundle */,
+				F45D0B5B2268CC6800EF4648 /* QBImagePickerController.framework */,
+				F45D0B5C2268CC6900EF4648 /* SAMKeychain.framework */,
+				F45D0B582268CC1800EF4648 /* Pods_frodomaster.framework */,
+				CAA8FE3034A144FB80C60E30 /* TNSAutoComplete.framework */,
+				680AFB5D1A714C03BF64C021 /* TNSCalendar.framework */,
+				04617F0B95D8449589898C12 /* TNSChart.framework */,
+				EFEBC89A0E9645249E66B316 /* TNSDataForm.framework */,
+				07886EE402454C5986E18D52 /* TNSGauge.framework */,
+				A3C8656B821845608FC00D10 /* TNSListView.framework */,
+				EC396A9C3A6B4AB89369BE14 /* TNSSideDrawer.framework */,
+				8C3EFA9EBD0E4C1D8E4F9F3D /* sqlitewrapper.framework */,
+				3BA266109C3448829DAFB2E4 /* TNSCore.framework */,
+				A40008D2E9A940D692B4ED6E /* TNSWidgets.framework */,
+				559B0227EF2BEF74C87FA5E1 /* Pods_frodomaster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		858B833718CA111C00AB12DE /* frodomaster */ = {
+			isa = PBXGroup;
+			children = (
+				CD45EE7A18DC2D5800FB50C0 /* app */,
+				858B833818CA111C00AB12DE /* Supporting Files */,
+			);
+			path = frodomaster;
+			sourceTree = "<group>";
+		};
+		858B833818CA111C00AB12DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				391174B821F1D99900BA2583 /* plugins-debug.xcconfig */,
+				391174B721F1D99900BA2583 /* plugins-release.xcconfig */,
+				391174B321F1CBD300BA2583 /* TNSDebugging.h */,
+				391174B421F1CBD300BA2583 /* TNSExceptionHandler.h */,
+				CDF4743E1BA4855C0087EA85 /* build.xcconfig */,
+				CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */,
+				CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */,
+				391174B521F1D7BF00BA2583 /* nativescript-build.xcconfig */,
+				858B833918CA111C00AB12DE /* frodomaster-Info.plist */,
+				858B833A18CA111C00AB12DE /* InfoPlist.strings */,
+				CD62955C1BB2678900AE3A93 /* main.m */,
+				858B833F18CA111C00AB12DE /* frodomaster-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		896A4D4E7D6B44EEB238AACE /* tns-core-modules */ = {
+			isa = PBXGroup;
+			children = (
+				E189BF42ACE34977BD8B7D73 /* NativeScriptEmbedder.h */,
+				63643C0946544E25BB1D6B69 /* NativeScriptEmbedder.m */,
+				3F624AC15BCD4A1D8E6D1EB8 /* module.modulemap */,
+			);
+			name = "tns-core-modules";
+			sourceTree = "<group>";
+		};
+		A37594AFCE3848BC97ECC23D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98D69CC568C1849E90FB6125 /* Pods-frodomaster.debug.xcconfig */,
+				3253ADA8307F2D9CBE804684 /* Pods-frodomaster.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E070579D1B39A9D000214BF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB1442B1206744FFA146320F /* Assets.xcassets */,
+				73B95C164E77429D86F1923D /* LaunchScreen.storyboard */,
+				D30BE510F19E4C99A2169250 /* build.xcconfig */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		858B83EF18CA22B800AB12DE /* frodomaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 858B843018CA22B800AB12DE /* Build configuration list for PBXNativeTarget "frodomaster" */;
+			buildPhases = (
+				4C187AB5425B61ACBCA4B62A /* [CP] Check Pods Manifest.lock */,
+				C97FD7AC1ADE5369004DB2A4 /* NativeScript PreBuild */,
+				858B83F218CA22B800AB12DE /* Sources */,
+				CD62955B1BB2651D00AE3A93 /* NativeScript PreLink */,
+				858B83F418CA22B800AB12DE /* Frameworks */,
+				858B842C18CA22B800AB12DE /* Resources */,
+				85F5BDFC1A9363BE006B9701 /* Embed Frameworks */,
+				CD3EAD351B05FF060042DBFC /* NativeScript PostBuild */,
+				B4E9FB5F0F3C4D8AB2A4E4A5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = frodomaster;
+			productName = JDBridgeApp;
+			productReference = 858B843318CA22B800AB12DE /* frodomaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		858B832618CA111C00AB12DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TNS;
+				LastUpgradeCheck = 940;
+				ORGANIZATIONNAME = Telerik;
+				TargetAttributes = {
+					858B83EF18CA22B800AB12DE = {
+						DevelopmentTeam = BCFN8YBZJ5;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 858B832918CA111C00AB12DE /* Build configuration list for PBXProject "frodomaster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 858B832518CA111C00AB12DE;
+			productRefGroup = 858B832F18CA111C00AB12DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				858B83EF18CA22B800AB12DE /* frodomaster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		858B842C18CA22B800AB12DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45D0B612268CC6900EF4648 /* QBImagePicker.bundle in Resources */,
+				CD45EE7C18DC2D5800FB50C0 /* app in Resources */,
+				858B842D18CA22B800AB12DE /* InfoPlist.strings in Resources */,
+				2CF6E13EC5964AEAB11E1A9E /* Assets.xcassets in Resources */,
+				4F83A396336C42E6A0CBF983 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C187AB5425B61ACBCA4B62A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-frodomaster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4E9FB5F0F3C4D8AB2A4E4A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-frodomaster/Pods-frodomaster-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/QBImagePickerController/QBImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QBImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-frodomaster/Pods-frodomaster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C97FD7AC1ADE5369004DB2A4 /* NativeScript PreBuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NativeScript PreBuild";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/internal/nativescript-pre-build\"";
+			showEnvVarsInLog = 0;
+		};
+		CD3EAD351B05FF060042DBFC /* NativeScript PostBuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NativeScript PostBuild";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/internal/nativescript-post-build\"";
+			showEnvVarsInLog = 0;
+		};
+		CD62955B1BB2651D00AE3A93 /* NativeScript PreLink */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NativeScript PreLink";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/internal/nativescript-pre-link\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		858B83F218CA22B800AB12DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD62955D1BB2678900AE3A93 /* main.m in Sources */,
+				67FFA0979C7B43BAB2BEE878 /* NativeScriptEmbedder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		858B833A18CA111C00AB12DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				858B833B18CA111C00AB12DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		858B835818CA111C00AB12DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		858B835918CA111C00AB12DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		858B843118CA22B800AB12DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDD59A261BB43B5D00EC2671 /* build-debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Winston Robins (3H23E8359M)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = BCFN8YBZJ5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-autocomplete/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-calendar/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-chart/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-dataform/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-gauge/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-listview/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-sidedrawer/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-sqlite/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-core/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/tns-core-modules-widgets/platforms/ios\"",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "frodomaster/frodomaster-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../node_modules/tns-core-modules/platforms/ios/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/frodomaster/frodomaster-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.callfrodo.callfrodo;
+				PRODUCT_NAME = frodomaster;
+				PROVISIONING_PROFILE = "fc42a0b2-bef7-4463-ac4a-df2659e2df58";
+				PROVISIONING_PROFILE_SPECIFIER = callfrodo;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		858B843218CA22B800AB12DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDD59A271BB43B5D00EC2671 /* build-release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Winston Robins (3H23E8359M)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = BCFN8YBZJ5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-autocomplete/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-calendar/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-chart/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-dataform/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-gauge/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-listview/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-sidedrawer/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-sqlite/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/nativescript-ui-core/platforms/ios\"",
+					"\"$(SRCROOT)/../../node_modules/tns-core-modules-widgets/platforms/ios\"",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "frodomaster/frodomaster-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../node_modules/tns-core-modules/platforms/ios/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+					"\"$(SRCROOT)/../../app/App_Resources/iOS/src\"",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/frodomaster/frodomaster-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.callfrodo.callfrodo;
+				PRODUCT_NAME = frodomaster;
+				PROVISIONING_PROFILE = "fc42a0b2-bef7-4463-ac4a-df2659e2df58";
+				PROVISIONING_PROFILE_SPECIFIER = callfrodo;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		858B832918CA111C00AB12DE /* Build configuration list for PBXProject "frodomaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858B835818CA111C00AB12DE /* Debug */,
+				858B835918CA111C00AB12DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		858B843018CA22B800AB12DE /* Build configuration list for PBXNativeTarget "frodomaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858B843118CA22B800AB12DE /* Debug */,
+				858B843218CA22B800AB12DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 858B832618CA111C00AB12DE /* Project object */;
+}
