@@ -18,6 +18,9 @@ import { MyHttpPostService } from "./provisioning.service";
 import { SecureStorage } from "nativescript-secure-storage";
 //import {platformNames} from "tns-core-modules/platform"
 import * as platformModule from "tns-core-modules/platform";
+import * as connectivity from "tns-core-modules/connectivity";
+
+
 @Component({
     selector: "Provisioning",
     moduleId: module.id,
@@ -29,13 +32,33 @@ export class ProvisioningComponent implements OnInit {
 
    
 
-  
+    private connectionType: string
     constructor(private translate: TranslateService,
     private routerExtensions: RouterExtensions,public acRoute:ActivatedRoute,
     private myPostService: MyHttpPostService) {
       this.showingProvisioning=true
       this.showingLongListPicker=false
-     
+      let connectionType = connectivity.getConnectionType();
+      switch (connectionType) {
+        case connectivity.connectionType.none:
+            this.connectionType = "None";
+            break;
+        case connectivity.connectionType.wifi:
+            this.connectionType = "Wi-Fi";
+            break;
+        case connectivity.connectionType.mobile:
+            this.connectionType = "Mobile";
+            break;
+        // case connectivity.connectionType.bluetooth:
+        //     this.connectionType = "Bluetooth"; // Example comng with NativeScript 5.x.x
+        //     break;
+        default:
+            break;
+    }
+    if (this.connectionType=="None"){
+      alert("No Internet")
+    }
+    
     
    // console.log(acRoute.params)
    // console.log(this.number)
@@ -49,28 +72,34 @@ export class ProvisioningComponent implements OnInit {
     public countryCode:string
     ngOnInit(): void {
         // Init your component properties here.
+        let udid=platformModule.device.uuid
         let secureStorage = new SecureStorage();
-        var value = secureStorage.getSync({
-          key: "sip_user"
-        });
-        if(value){
-         this.routerExtensions.navigate(['home'], {
+        secureStorage.get({
+          key: "udid"
+        }).then(
+          function(value) {
+            if (value==udid){
+              console.log(value+'  - '+ udid)
+              this.routerExtensions.navigate(['home'], {
                       
-            transition: {
-              name: "fade"
-            },
-            queryParams: {
-              number:String(this.number),
-              cc:String(this.countryCode)
-              
-              
-              
-          },
-            clearHistory: true
-          } 
+                    transition: {
+                      name: "fade"
+                    },
+                    queryParams: {
+                      number:String(this.number),
+                      cc:String(this.countryCode)
+                      
+                      
+                      
+                  },
+                    clearHistory: true
+                  } 
+              );
+            }
+          }
         );
-       
-        }
+        
+        
         this.country=[
          "Select Country","Spain","United Kingdom"
         ]
@@ -116,7 +145,7 @@ export class ProvisioningComponent implements OnInit {
             .postData(data)
             .subscribe(res => {
               //  this.message = (<any>res).json.data.username;
-             // console.log(res)
+              console.log(res)
               let code=(<any>res).code
               //console.log(code)
               if(code==202 || code==201){
@@ -200,6 +229,9 @@ export class ProvisioningComponent implements OnInit {
                           } 
                         );
                     }
+              }
+              else if(code>=500){
+                alert("Your phone number was already logged in, please contact with your administrator  for instructions")
               }
               else
               {

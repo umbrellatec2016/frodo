@@ -4,6 +4,37 @@
     </StackLayout>
 </ActionBar>
 
-<GridLayout class="page page-content messages-page-content" rows="160, 80, *">
-  
+<GridLayout class="page page-content messages-page-content" rows="*, *, *">
+    <ListView   > 
+        
+           
+            <StackLayout orientation="horizontal" class="chat-item"  >
+               
+                   
+               
+                
+                <Label   [text]="username"></Label>
+               
+                
+            </StackLayout>
+            <StackLayout orientation="horizontal" class="chat-item"  >
+               
+                   
+               
+                
+                <Label class="contact-text"  [text]="password"></Label>
+               
+                
+            </StackLayout>
+            <StackLayout orientation="horizontal" class="chat-item"  >
+               
+                   
+               
+                
+                <Label class="contact-text"  [text]="proxy"></Label>
+               
+                
+            </StackLayout>
+        
+    </ListView>
 </GridLayout>
