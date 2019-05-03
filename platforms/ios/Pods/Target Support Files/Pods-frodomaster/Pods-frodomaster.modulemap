@@ -1,6 +1,0 @@
-framework module Pods_frodomaster {
-  umbrella header "Pods-frodomaster-umbrella.h"
-
-  export *
-  module * { export * }
-}

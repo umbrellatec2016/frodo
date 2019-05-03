@@ -12,6 +12,11 @@ import { listenToElementOutputs } from "@angular/core/src/view/element";
 import { screen, ScreenMetrics } from "tns-core-modules/platform";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout"
 import { Button } from "tns-core-modules/ui/button";
+import * as connectivity from "connectivity";
+import * as dialogs from "tns-core-modules/ui/dialogs";
+import * as permissions from "nativescript-permissions";
+import { setInterval, clearInterval } from "tns-core-modules/timer";
+
 //import {Contacts} from "nativescript-contacts-lite"
 
 declare var android: any;
@@ -30,7 +35,9 @@ export class HomeComponent implements OnInit {
     public cnts:any[] = [];
     public letter="C" 
       public country:any[]=[]
-   
+    private id = setInterval(() => {
+        this.internetCheck()
+    }, 2000);
     constructor(private translate: TranslateService, ) {
         
         let Contacts = require("nativescript-contacts-lite");
@@ -95,20 +102,13 @@ export class HomeComponent implements OnInit {
     }
     public screenScale = screen.mainScreen.heightDIPs
     ngOnInit(): void {
-        console.log(this.cnts.length)
+        
         this.screenScale = screen.mainScreen.heightDIPs+100
         //let screenScale = screen.mainScreen.heightDIPs
-        console.log(this.screenScale + "-")
-        for(let x=0;x<this.cnts.length;x++){
-            //this.cnts.push(JSON.parse(t))
-            //console.log(this.cnts[x])
-        }
-        // Init your component properties here.
-     //   this.cnts= this.contacts.getAllContacts(['id','name','phoneNumbers','emailAddresses'])
-        //console.log(this.cnts.data)
-        //console.log(this.contacts.getAllContacts(['name']).data)
+    
        
-        //console.log(list)
+       
+        
     }
     public onTap(args){
         alert("This is just a prototype app!")
@@ -120,4 +120,19 @@ export class HomeComponent implements OnInit {
     public selectedIndexChanged(e){
 
     }
+    internetCheck(){
+        let conn=connectivity.getConnectionType()
+         //console.log("Connection type "+conn)
+         clearInterval(this.id);
+
+         if(conn===0){
+          dialogs.alert({
+              title: "Internet Error",
+              message: "No internet connection",
+              okButtonText: "Close"
+          }).then(() => {
+              console.log("Dialog closed!");
+          });
+         }
+      }
 }

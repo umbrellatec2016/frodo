@@ -18,9 +18,9 @@ import { MyHttpPostService } from "./provisioning.service";
 import { SecureStorage } from "nativescript-secure-storage";
 //import {platformNames} from "tns-core-modules/platform"
 import * as platformModule from "tns-core-modules/platform";
-import * as connectivity from "tns-core-modules/connectivity";
-
-
+import * as appSettings from "tns-core-modules/application-settings";
+import * as connectivity from "connectivity";
+import * as dialogs from "tns-core-modules/ui/dialogs";
 @Component({
     selector: "Provisioning",
     moduleId: module.id,
@@ -31,35 +31,18 @@ export class ProvisioningComponent implements OnInit {
   
 
    
-
+  private id = setInterval(() => {
+    this.internetCheck()
+}, 2000);
     private connectionType: string
     constructor(private translate: TranslateService,
     private routerExtensions: RouterExtensions,public acRoute:ActivatedRoute,
     private myPostService: MyHttpPostService) {
       this.showingProvisioning=true
       this.showingLongListPicker=false
-      let connectionType = connectivity.getConnectionType();
-      switch (connectionType) {
-        case connectivity.connectionType.none:
-            this.connectionType = "None";
-            break;
-        case connectivity.connectionType.wifi:
-            this.connectionType = "Wi-Fi";
-            break;
-        case connectivity.connectionType.mobile:
-            this.connectionType = "Mobile";
-            break;
-        // case connectivity.connectionType.bluetooth:
-        //     this.connectionType = "Bluetooth"; // Example comng with NativeScript 5.x.x
-        //     break;
-        default:
-            break;
-    }
-    if (this.connectionType=="None"){
-      alert("No Internet")
-    }
+      
     
-    
+      
    // console.log(acRoute.params)
    // console.log(this.number)
     }
@@ -70,34 +53,33 @@ export class ProvisioningComponent implements OnInit {
     public index: number;
     public number:string
     public countryCode:string
+
     ngOnInit(): void {
+      
+      
+       
         // Init your component properties here.
         let udid=platformModule.device.uuid
-        let secureStorage = new SecureStorage();
-        secureStorage.get({
-          key: "udid"
-        }).then(
-          function(value) {
-            if (value==udid){
-              console.log(value+'  - '+ udid)
-              this.routerExtensions.navigate(['home'], {
+       console.log("uuid "+platformModule.device.uuid)
+        if(appSettings.hasKey("udid") ){
+          if(appSettings.getString("udid")==udid){
+            this.routerExtensions.navigate(['home'], {
                       
-                    transition: {
-                      name: "fade"
-                    },
-                    queryParams: {
-                      number:String(this.number),
-                      cc:String(this.countryCode)
-                      
-                      
-                      
-                  },
-                    clearHistory: true
-                  } 
-              );
-            }
+              transition: {
+                name: "fade"
+              },
+              queryParams: {
+                number:String(this.number),
+                cc:String(this.countryCode)
+                
+                
+                
+            },
+              clearHistory: true
+            } 
+          )
           }
-        );
+        }
         
         
         this.country=[
@@ -117,6 +99,7 @@ export class ProvisioningComponent implements OnInit {
         //console.log(params)
       });
         //console.log(this.location.path())
+        this.internetCheck()
     }
     private openSelect()
     {
@@ -136,8 +119,7 @@ export class ProvisioningComponent implements OnInit {
           let cc=String(this.countryCode)
           let pn=String(this.number)
           let udid=platformModule.device.uuid
-          //900C6D4737B9F7D5
-         // console.log(udid)
+          
           let data="udid="+udid+"&cc="+cc+"&os=IOS&app_id=1&deviceBrand=Apple&deviceModel=Iphone&osVersion=7.0&pn="+pn
           
       this.myPostService
@@ -287,5 +269,18 @@ export class ProvisioningComponent implements OnInit {
     selectCn(dat){
       console.log(dat.callingCodes[0])
     }
-    
+    internetCheck(){
+      clearInterval(this.id);
+      let conn=connectivity.getConnectionType()
+       //console.log("Connection type "+conn)
+       if(conn===0){
+        dialogs.alert({
+            title: "Internet Error",
+            message: "No internet connection",
+            okButtonText: "Close"
+        }).then(() => {
+            console.log("Dialog closed!");
+        });
+       }
+    }
 }
