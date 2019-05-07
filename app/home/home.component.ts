@@ -12,11 +12,11 @@ import { listenToElementOutputs } from "@angular/core/src/view/element";
 import { screen, ScreenMetrics } from "tns-core-modules/platform";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout"
 import { Button } from "tns-core-modules/ui/button";
-import * as connectivity from "connectivity";
+import * as connectivity from "tns-core-modules/connectivity";
 import * as dialogs from "tns-core-modules/ui/dialogs";
 import * as permissions from "nativescript-permissions";
 import { setInterval, clearInterval } from "tns-core-modules/timer";
-
+import { prompt, PromptResult, PromptOptions, inputType, capitalizationType } from "tns-core-modules/ui/dialogs";
 //import {Contacts} from "nativescript-contacts-lite"
 
 declare var android: any;
@@ -111,7 +111,22 @@ export class HomeComponent implements OnInit {
         
     }
     public onTap(args){
-        alert("This is just a prototype app!")
+        
+        let options: PromptOptions = { 
+            title: "Add Extension Number",
+            defaultText: " Number ",
+            message: "How you doin'",
+            okButtonText: "Add",
+            cancelButtonText: "Cancel",
+          //  neutralButtonText: "Neutral",
+            cancelable: true,
+            inputType: inputType.number, // email, number, text, password, or email
+            capitalizationType: capitalizationType.sentences // all. none, sentences or words
+            
+        };
+        prompt(options).then((result: PromptResult) => {
+            console.log("Hello, " + result.text);
+        });
     }
     onItemTap(e){
        // alert(this.cnts.length)
