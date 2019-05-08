@@ -18,6 +18,7 @@ import * as permissions from "nativescript-permissions";
 import { setInterval, clearInterval } from "tns-core-modules/timer";
 import { prompt, PromptResult, PromptOptions, inputType, capitalizationType } from "tns-core-modules/ui/dialogs";
 //import {Contacts} from "nativescript-contacts-lite"
+import * as appSettings from "tns-core-modules/application-settings";
 
 declare var android: any;
 declare var tt;
@@ -33,6 +34,8 @@ export class HomeComponent implements OnInit {
     public currentLanguage = 'en';
   
     public cnts:any[] = [];
+    public user:string
+    public activated=false
     public letter="C" 
       public country:any[]=[]
     private id = setInterval(() => {
@@ -41,20 +44,29 @@ export class HomeComponent implements OnInit {
     constructor(private translate: TranslateService, ) {
         
         let Contacts = require("nativescript-contacts-lite");
-       Contacts.getContacts(['display_name', 'phone','thumbnail'])
+        
+        Contacts.getContacts(['display_name', 'phone','photo','contact_id'])
        .then(res=>{
-           //console.log(res)
+        //  console.log(res)
            
            for(let x=0; x <res.length;x++){
                //console.log(res[x].thumbnail)
+               
                let number=' '
+               let ext="+ Extension"
                for(let xx=0;xx<res[x].phone.length;xx++){ 
                    number=res[x].phone[xx].number
                }
+               if(appSettings.hasKey(res[x].contact_id)){
+                   ext=appSettings.getString(res[x].contact_id)
+               }
                this.cnts.push({user:res[x].display_name,
                   element:number,
-                 thumbnail:res.thumbnail
+                 thumbnail:res[x].photo,
+                 extension:ext,
+                 contact_id:res[x].contact_id
               })
+              console.log(this.cnts)
            }
           
               //element => {
@@ -110,12 +122,12 @@ export class HomeComponent implements OnInit {
        
         
     }
-    public onTap(args){
-        
+    public onTap(args,id){
+        console.log("Id: "+id)
         let options: PromptOptions = { 
             title: "Add Extension Number",
-            defaultText: " Number ",
-            message: "How you doin'",
+            defaultText: "",
+            message: "Extension Number for internal Calls",
             okButtonText: "Add",
             cancelButtonText: "Cancel",
           //  neutralButtonText: "Neutral",
@@ -124,8 +136,10 @@ export class HomeComponent implements OnInit {
             capitalizationType: capitalizationType.sentences // all. none, sentences or words
             
         };
+        console.log("Id:"+id)
         prompt(options).then((result: PromptResult) => {
             console.log("Hello, " + result.text);
+            appSettings.setString(id,result.text)
         });
     }
     onItemTap(e){
@@ -149,5 +163,46 @@ export class HomeComponent implements OnInit {
               console.log("Dialog closed!");
           });
          }
+      }
+      public search(){
+          if(this.activated)
+          this.activated=false
+          else
+          this.activated=true
+      }
+      public filtere(){
+        let Contacts = require("nativescript-contacts-lite");
+        this.cnts=[]
+        console.log("COnsole "+this.user)
+        if (this.activated)
+        Contacts.getContacts(['display_name', 'phone','photo','contact_id'],this.user)
+        //else
+      //  Contacts.getContacts(['display_name', 'phone','photo','contact_id'])
+        .then(res=>{
+              console.log(res)
+               
+               for(let x=0; x <res.length;x++){
+                   //console.log(res[x].thumbnail)
+                   
+                   let number=' '
+                   let ext="+ Extension"
+                   for(let xx=0;xx<res[x].phone.length;xx++){ 
+                       number=res[x].phone[xx].number
+                   }
+                   if(appSettings.hasKey(res[x].contact_id)){
+                       ext=appSettings.getString(res[x].contact_id)
+                   }
+                   this.cnts.push({user:res[x].display_name,
+                      element:number,
+                     thumbnail:res[x].photo,
+                     extension:ext,
+                     contact_id:res[x].contact_id
+                  })
+                  console.log(this.cnts)
+               }
+              
+                  
+           })
+
       }
 }

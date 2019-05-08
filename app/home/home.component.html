@@ -1,21 +1,32 @@
-<ActionBar class="action-bar">
-    <StackLayout class="action-bar-title">
-        <Label text="Contacts"></Label>
+<ActionBar class="action-bar" style="height:200px;">
+    <StackLayout class="action-bar-title" width="100%"orientation="horizontal">
+        <Label row="0" text="Contacts" verticalAlignment="top" *ngIf="!activated"></Label>
+        <TextField *ngIf="activated" row="1" col="0" hint="Enter phone" 
+        [(ngModel)]='user' 
+        secure="false"
+        keyboardType="email"
+        returnKeyType="done" 
+        autocorrect="false"
+        maxLength="30"
+        (returnPress)="filtere()" 
+        class="number"></TextField> 
+        <Label row="0" text="&#xe986;" class="icon" (tap)="search()"></Label>
     </StackLayout>
+    
 </ActionBar>
 
 <ScrollView  > 
     <StackLayout (loaded)="getSize($event)" >
-        <ListView [items]="cnts" (tap)="onTap($event)"  flexGrow="1" height="{{heights}}"  > 
+        <ListView [items]="cnts"   flexGrow="1" height="{{heights}}"  > 
             <ng-template let-contact="item" let-question="item.user.charAt(0)"  >
                
                 <StackLayout orientation="horizontal" class="chat-item"  >
                    
                        
-                   
-                    <StackLayout class="contactpic" style="background-image:url(data:image/png;contact.thumbnail)"></StackLayout>
+                    <Image class="contactpic"  [src]="contact.thumbnail"></Image>
+                    
                     <Label class="contact-text"  [text]="contact.user"></Label>
-                    <Button text="+ Extension" (tap)="onTap($event)" class="btn  cp" ></Button>
+                    <Button [text]="contact.extension" (tap)="onTap($event,contact.contact_id)" class="btn  cp" ></Button>
                     
                 </StackLayout>
             </ng-template>

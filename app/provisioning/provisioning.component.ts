@@ -19,7 +19,7 @@ import { SecureStorage } from "nativescript-secure-storage";
 //import {platformNames} from "tns-core-modules/platform"
 import * as platformModule from "tns-core-modules/platform";
 import * as appSettings from "tns-core-modules/application-settings";
-import * as connectivity from "connectivity";
+import * as connectivity from "tns-core-modules/connectivity";
 import * as dialogs from "tns-core-modules/ui/dialogs";
 @Component({
     selector: "Provisioning",
@@ -153,31 +153,15 @@ export class ProvisioningComponent implements OnInit {
 
                 
                 let secureStorage = new SecureStorage();
-                var value = secureStorage.getSync({
-                  key: "sip_user"
-                });
+                var value = appSettings.getString("udid")
                 if(!value){
                           let data=(<any>res).data
-                          secureStorage.set({
-                            key: "sip_user",
-                            value: data.user
-                          }).then(success => console.log("Saved User" + success))
-                          secureStorage.set({
-                            key: "sip_password",
-                            value: data.password
-                          }).then(success => console.log("Saved password" + success))
-                          secureStorage.set({
-                            key: "sip_proxy",
-                            value: data.proxy
-                          }).then(success => console.log("Saved proxy" + success))
-                          secureStorage.set({
-                            key: "sip_transport", 
-                            value: data.transport
-                          }).then(success => console.log("Saved transport" + success))
-                          secureStorage.set({
-                            key: "sip_port",
-                            value: data.port
-                          }).then(success => console.log("Saved password" + success));
+                          appSettings.setString("sip_user", data.user);
+                          appSettings.setString("password", data.password);
+                          appSettings.setString("sip_proxy", data.proxy);
+                          appSettings.setString("sip_transport", data.user);
+                          appSettings.setString("sip_port", data.user);
+                          appSettings.setString("udid", udid);
                           this.routerExtensions.navigate(['home'], {
                       
                             transition: {
